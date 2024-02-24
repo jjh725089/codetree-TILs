@@ -8,7 +8,7 @@ int main() {
     {
         if (i % 2 == 0)
         {
-            for(int j = 0; j < n - i / 2; i++)
+            for(int j = 0; j < n - i / 2; j++)
             {
                 cout << "* ";
             }
