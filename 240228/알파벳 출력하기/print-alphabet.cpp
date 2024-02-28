@@ -11,6 +11,8 @@ int main() {
         {
             cout << cnt;
             cnt++;
+            if(cnt == 'Z' + 1)
+            cnt = 'A';
         }
         cout << endl;
     }
