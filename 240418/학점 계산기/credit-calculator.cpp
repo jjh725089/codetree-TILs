@@ -19,6 +19,6 @@ int main() {
     else if (avg >= 3.0)
     cout << "Good";
     else
-    cout << "poor";
+    cout << "Poor";
     return 0;
 }
