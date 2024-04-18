@@ -22,7 +22,8 @@ int main() {
     }
     cout << val_sum << " ";
     cout << fixed;
-    cout.precision(1), cout << double(val_sum) / j;
+    cout.precision(1);
+    cout << double(val_sum) / j;
 
     return 0;
 }
