@@ -20,7 +20,7 @@ int main() {
             t_t_sum += arr[i];
         }
     }
-    t_t_avg = t_t_sum / cnt;
+    t_t_avg = double(t_t_sum) / cnt;
     cout << e_val_sum << " ";
     cout << fixed;
     cout.precision(1);
