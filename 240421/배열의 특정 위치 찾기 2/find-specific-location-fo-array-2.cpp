@@ -6,16 +6,18 @@ int main() {
     for(int i = 0; i < 10; i++)
     {
         cin >> arr[i];
-        if(arr[i] % 2 == 1)
-            if(arr[i] > e_sum)
-            e_sum = arr[i];
+        if(i % 2 == 0)
+        {
+            e_sum += arr[i];
+        }
         else
-            if(arr[i] > o_sum)
-            o_sum = arr[i];
+        {
+            o_sum += arr[i];
+        }
     }
-    if(o_sum >= e_sum)
+    if(o_sum > e_sum)
         cout << o_sum - e_sum;
-    else
+    else if (e_sum >= o_sum)
         cout << e_sum - o_sum;
     return 0;
 }
