@@ -12,11 +12,11 @@ int main() {
     }
     for(int i = 0; i < N - 1; i++)
     {
-        for(int j = 1; j < N; j++)
+        for(int j = i + 1; j < N; j++)
         {
             tn_sum = n_sum;
             tn_sum = tn_sum - arr[i] - arr[j];
-            if(S - tn_sum >=0)
+            if(S - tn_sum >= 0)
             {
                 min = S - tn_sum;
             }
