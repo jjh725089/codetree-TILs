@@ -14,8 +14,7 @@ int main() {
     {
         for(int j = i + 1; j < N; j++)
         {
-            tn_sum = n_sum;
-            tn_sum = tn_sum - arr[i] - arr[j];
+            tn_sum = n_sum - arr[i] - arr[j];
             if(S - tn_sum >= 0)
             {
                 min = S - tn_sum;
