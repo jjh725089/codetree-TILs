@@ -15,7 +15,7 @@ int main() {
     //col
     for(int i = 0; i < n - 2; i++)
     {
-        for(int j = 0; j < n; j++)
+        for(int j = 0; j < m; j++)
         {
             sum = arr[i][j] + arr[i + 1][j] + arr[i + 2][j];
             if(sum > max)
@@ -23,11 +23,11 @@ int main() {
             sum = 0;
         }
     }
-    for(int j = 0; j < n - 2; j++)
+    for(int j = 0; j < m - 2; j++)
     {
         for(int i = 0; i < n; i++)
         {
-            sum = arr[i][j] + arr[i][j + 1] + arr[i][j + 1];
+            sum = arr[i][j] + arr[i][j + 1] + arr[i][j + 2];
             if(sum > max)
             max = sum;
             sum = 0;
@@ -36,11 +36,11 @@ int main() {
     //한 칸을 기준으로 상(좌,우) 하(좌,우) 
     for(int i = 0; i < n; i++)
     {
-        for(int j = 0; j < n; j++)
+        for(int j = 0; j < m; j++)
         {
-            //if(i - 1 < 0 || i + 1 == n || j - 1 < 0 || j + 1 == n)
+            //if(i - 1 < 0 || i + 1 == n || j - 1 < 0 || j + 1 == m)
             //break;
-            if(j + 1 == n || i + 1 == n)
+            if(j + 1 == m || i + 1 == n)
             sum = 0;
             else
             {
@@ -48,7 +48,7 @@ int main() {
                 if(sum > max)
                 max = sum;
             }
-            if(j + 1 == n || i - 1 < 0)
+            if(j + 1 == m || i - 1 < 0)
             sum = 0;
             else
             {
