@@ -2,7 +2,7 @@
 using namespace std;
 int main() {
     // 여기에 코드를 작성해주세요.
-    int n, max = -1, sum = 0, cnt = 0;
+    int n, max = -1, sum, cnt;
     cin >> n;
     int arr[20][20];
     for(int i = 0; i < n; i++)
@@ -17,14 +17,15 @@ int main() {
         for(int j = 0; j < n - 2; j++)
         {
             cnt = 0;
-            while (cnt <= 3)
+            sum = 0;
+            while (cnt < 3)
             {
             sum += arr[i+cnt][j] + arr[i+cnt][j+1] + arr[i+cnt][j+2];
             cnt++;
-            if (i+cnt >= n)
+            if (i+cnt > n)
             break;
             }
-            if(sum > max)
+            if(sum >= max)
             max = sum;
         }
     }
