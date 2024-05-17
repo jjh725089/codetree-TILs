@@ -43,7 +43,7 @@ int main() {
         }
     }
     if (n == 1)
-    total = 2
+    total = 2;
     //cout << total << "c" << endl;
     cout << total << endl;
     return 0;
