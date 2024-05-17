@@ -13,27 +13,33 @@ int main() {
     }
     for(int i = 0; i < n; i++)
     {
-        int cnt = 0;
+        int cnt = 1;
         for(int j = 0; j < n - 1; j++)
         {
             if(arr[i][j] == arr[i][j+1])
             {
                 cnt++;
             }
-            if (cnt == m - 1) // m - 1 인이유 연속일경우 2개부터 
+            if (cnt == m)
+            {
             total++;
+            break;
+            }
         }
     }
     //cout << total<< "r" << endl;
     for(int j = 0; j < n; j++)
     {
-        int cnt = 0;
+        int cnt = 1;
         for(int i = 0; i < n - 1; i++)
         {
             if(arr[i][j] == arr[i+1][j])
             cnt++;
-            if (cnt == m - 1)
+            if (cnt == m)
+            {
             total++;
+            break;
+            }
         }
     }
     //cout << total << "c" << endl;
