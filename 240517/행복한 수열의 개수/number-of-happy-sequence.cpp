@@ -20,9 +20,14 @@ int main() {
             {
                 cnt++;
             }
+            if(cnt > 1 && arr[i][j] != arr[i][j+1])
+            {
+                cnt = 1;
+            }
             if (cnt == m)
             {
             total++;
+            cnt = 1;
             break;
             }
         }
@@ -34,10 +39,17 @@ int main() {
         for(int i = 0; i < n - 1; i++)
         {
             if(arr[i][j] == arr[i+1][j])
-            cnt++;
+            {
+                cnt++;
+            }
+            if(cnt > 1 && arr[i][j] != arr[i+1][j])
+            {
+                cnt = 1;
+            }
             if (cnt == m)
             {
             total++;
+            cnt = 1;
             break;
             }
         }
